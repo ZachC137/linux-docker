@@ -30,29 +30,6 @@ RUN apt-get update && \
                     curl \
                     git \
                     vim \
-                    ruby \
-                    make \
-                    unzip \
-                    screen \
-                    nodejs \
-                    npm \
-                    whois \
-                    dnsutils \
-                    traceroute \
-                    telnet \
-                    mtr \
-                    libxml2 \
-                    libxml2-dev \
-                    libz-dev \
-                    libexpat-dev \
-                    python-pip \
-                    python-requests \
-                    tzdata \
-                    sudo \
-                    iputils-ping \
-                    net-tools \
-                    iproute2 \
-                    zsh \
                     && \
     mkdir -p /var/run/sshd && \
     mkdir -p /usr/local/bin && \
