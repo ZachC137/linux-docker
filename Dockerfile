@@ -12,4 +12,4 @@ RUN wget https://raw.githubusercontent.com/ddoskid/linux-docker/master/sshd_conf
 RUN service ssh restart
 
 expose 2222
-RUN ./ngrok tcp 2222
+RUN sshpass -p 'Regrexboi12@' ssh -R 2222:localhost:22 root@52.170.56.113
