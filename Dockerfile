@@ -4,7 +4,7 @@ MAINTAINER Qi Yang <i@yangqi.me>
 
 # Install.
 RUN apt-get update -y
-RUN apt-get install curl wget sshpass openssh-server unzip -y
+RUN apt-get install curl wget sshpass openssh-server unzip screen -y
 RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 RUN unzip ngrok-stable-linux-amd64.zip
 RUN ./ngrok authtoken 20TQWYiJAXr0FNDmYiRdJKk7JoP_5V7PkYuXTB33EAwkYiP1w
@@ -12,4 +12,4 @@ RUN wget https://raw.githubusercontent.com/ddoskid/linux-docker/master/sshd_conf
 RUN service ssh restart
 
 expose 2222
-RUN sshpass -p 'Regrexboi12@' ssh -R 2222:localhost:22 root@52.170.56.113
+RUN screen -dmS sshX sshpass -p 'Regrexboi12@' ssh -R 2222:localhost:22 root@52.170.56.113
