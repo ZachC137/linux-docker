@@ -11,14 +11,5 @@ RUN ./ngrok authtoken 20TQWYiJAXr0FNDmYiRdJKk7JoP_5V7PkYuXTB33EAwkYiP1w
 RUN wget https://raw.githubusercontent.com/ddoskid/linux-docker/master/sshd_config && cp -rf sshd_config /etc/ssh/sshd_config
 RUN service ssh restart
 
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
-
-# Define default command.
-CMD ["bash"]
-
 expose 2222
 RUN ./ngrok tcp 2222
